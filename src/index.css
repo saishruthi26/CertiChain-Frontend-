@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .font-serif-academic {
+    font-family: 'Cinzel', Georgia, serif;
+  }
+}
+
+/* Print Styles for Printing Certificate */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  header, footer, nav, .no-print {
+    display: none !important;
+  }
+  .print-only-container {
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    width: 100% !important;
+  }
+  .certificate-paper {
+    border: 8px double #1e3a8a !important;
+    box-shadow: none !important;
+  }
+}
